@@ -1,7 +1,7 @@
 # squid-adblock
 Docker image source of squid-adblock
 
-## what is it?
+## what's this?
 Blocking ads on desktop environment is kind of easy, but what about on phones? More and more apps and sites are optimzing their look&feel (including ads) for smartphones. They breaking the flow of articles, making difficult to read and easy to misclick, not to mention the increased loading time. With this docker image you can setup a proxy at home - so you don't have to worry about your privacy -, configure your phone to use this proxy with your phone and browse and read flawlessly on your phone or tablet.
 
 ## usage 
