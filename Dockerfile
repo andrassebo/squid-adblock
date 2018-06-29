@@ -2,10 +2,13 @@ FROM ubuntu
 MAINTAINER andras.sebo@gmail.com
 
 RUN apt-get update \
-  && apt-get install -y wget nano ca-certificates unzip apt-transport-https net-tools squid
+  && apt-get install -y nano squid
 
 COPY squid.conf /etc/squid/squid.conf
 COPY restricted-sites.acl /etc/squid/restricted-sites.acl
+COPY access-log-rotate.sh /etc/cron.daily/access-log-rotate.sh
+  
+RUN chmod +x /etc/cron.daily/access-log-rotate.sh
   
 EXPOSE 3128/tcp
 
