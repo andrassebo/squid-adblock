@@ -6,10 +6,10 @@ RUN apk update \
 	&& apk add nano \
 	&& rm -rf /var/cache/apk/*
 
-COPY squid.conf /etc/squid/squid.conf
-COPY restricted-sites.acl /etc/squid/restricted-sites.acl
-COPY access-log-rotate.sh /etc/cron.daily/access-log-rotate.sh
-COPY start-squid.sh /usr/local/bin/
+COPY config/squid.conf /etc/squid/squid.conf
+COPY config/restricted-sites.acl /etc/squid/restricted-sites.acl
+COPY scripts/access-log-rotate.sh /etc/cron.daily/access-log-rotate.sh
+COPY scripts/start-squid.sh /usr/local/bin/
 
 RUN chmod +x /usr/local/bin/start-squid.sh
 

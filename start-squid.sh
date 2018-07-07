@@ -1,9 +1,2 @@
-mkdir -p /var/spool/squid
-touch /var/log/squid/access.log
-chown -R squid:squid /var/cache/squid
-chown -R squid:squid /var/log/squid
-chown -R squid:squid /var/spool/squid
-chmod +x /etc/cron.daily/access-log-rotate.sh
-
-/usr/sbin/squid -z
-/usr/sbin/squid
+docker rm -f squid-adblock
+docker run -d -v "$(pwd)"/configs:/etc/squid -p 3128:3128 --name squid-adblock --restart unless-stopped andrassebo/squid-adblock:2.0-armhf
