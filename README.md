@@ -9,7 +9,7 @@ Blocking ads on desktop environment is kind of easy, but what about on phones? M
 If you don't want to change, configure or compile your own version you can deploy the pre-compiled image.
 
 #### example
-```docker run -d -p 3128:3128 --name squid-adblock andrassebo/squid-adblock```
+```docker run -d -v "$(pwd)/configs:/etc/squid" -p 3128:3128 --name squid-adblock andrassebo/squid-adblock```
 
 ### create your own image
 In case you wish to modify something, add custom domains or just simply re-compile clone this repo and
