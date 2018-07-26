@@ -6,6 +6,7 @@ RUN apk update \
 	&& apk add nano \
 	&& rm -rf /var/cache/apk/*
 
+# add some default configs
 COPY config/squid.conf /etc/squid/squid.conf
 COPY config/restricted-sites.acl /etc/squid/restricted-sites.acl
 COPY scripts/access-log-rotate.sh /etc/cron.daily/access-log-rotate.sh
