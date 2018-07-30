@@ -1,7 +1,7 @@
 docker rm -f squid-adblock
 docker volume create squid-log
 
-docker run -d
+docker run -d \
     -v "$(pwd)"/configs:/etc/squid \
     -v squid-log:/var/log/squid \
     -p 3128:3128 \
