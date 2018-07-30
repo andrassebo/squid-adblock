@@ -40,7 +40,7 @@
 .ibillboard.com
 .imgfarm.com
 .jumptap.com
-.l7cache.com
+#.l7cache.com
 .liftoff.io
 .lijit.com
 .m6r.eu
@@ -1753,6 +1753,7 @@ static.fmpub.net
 static.itrack.it
 static.matterport.com
 staticads.btopenworld.com
+staticxx.facebook.com
 statm.the-adult-company.com
 stats.appsflyer.com
 stats.blogger.com
