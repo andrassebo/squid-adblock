@@ -3,7 +3,7 @@ touch /var/log/squid/access.log
 chown -R squid:squid /var/cache/squid
 chown -R squid:squid /var/log/squid
 chown -R squid:squid /var/spool/squid
-chmod +x /etc/cron.daily/access-log-rotate.sh
+chmod a+x /etc/periodic/daily/access-log-rotate
 
 /usr/sbin/squid -z
 /usr/sbin/squid
