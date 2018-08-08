@@ -2,10 +2,10 @@ FROM alpine
 MAINTAINER andras.sebo@gmail.com
 
 RUN apk update \
-	&& apk add squid \
-	&& apk add nano \
+    && apk add squid \
+    && apk add nano \
     && apk add less \
-	&& rm -rf /var/cache/apk/*
+    && rm -rf /var/cache/apk/*
 
 # add some default configs
 COPY configs/squid.conf /etc/squid/squid.conf
