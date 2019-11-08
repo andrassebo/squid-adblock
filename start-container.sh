@@ -7,4 +7,6 @@ docker run -d \
     -p 3128:3128 \
     --name squid-adblock \
     --restart on-failure:3 \
+    --memory="1g" \
+    --cpus="1" \
     andrassebo/squid-adblock

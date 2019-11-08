@@ -5,5 +5,7 @@ chown -R squid:squid /var/log/squid
 chown -R squid:squid /var/spool/squid
 chmod a+x /etc/periodic/daily/access-log-rotate
 
+crond
+
 /usr/sbin/squid -z
 /usr/sbin/squid
