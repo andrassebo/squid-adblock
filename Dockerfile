@@ -5,6 +5,7 @@ RUN apk update \
     && apk add squid \
     && apk add nano \
     && apk add less \
+    && apk add tzdata \
     && rm -rf /var/cache/apk/*
 
 # add some default configs
@@ -15,6 +16,8 @@ COPY scripts/start-squid.sh /usr/local/bin/
 
 RUN chmod +x /usr/local/bin/start-squid.sh
 RUN chmod a+x /etc/periodic/daily/access-log-rotate
+RUN cp /usr/share/zoneinfo/Europe/Berlin /etc/localtime
+RUN crond
 
 EXPOSE 3128/tcp
 
